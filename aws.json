@@ -1,0 +1,21 @@
+{
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "access_key":"AKIA4TUJKA4GVLB65IOS",
+            "secret_key":"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",
+            "region": "us-east-2",
+            "ami_name":"website-server",
+            "source_ami":"ami-00399ec92321828f5",
+            "instance_type":"t2.micro",
+            "ssh_username":"ubuntu"
+        }
+    ],
+
+    "provisioners":[
+        {
+            "type" : "shell",
+            "script":"setup-elastic.sh"
+       
+        }]
+}
